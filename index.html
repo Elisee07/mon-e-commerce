@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My e-Commerce | Group-Alpha</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    
+    <!--En tête-->
+    <header class="entete">
+        
+        <div class="conteneur">
+
+            <div class="barre-nav">
+
+                <button class="btn-menu" id="btnMenuGauche">
+                    <i class="fa-solid fa-bars-staggered" style="color: white;"></i>
+                </button>
+
+                <nav class="navigation bureau-uniquement">
+                    <a href="#" class="lien actif">HOME</a>
+                    <a href="#" class="lien">SHOP</a>
+                    <a href="#" class="lien">MAGAZINE</a>
+                </nav>
+
+                <div class="actions">
+                    <button class="btn-icone">
+                        <img src="img/chariot.png" alt="Panier">
+                    </button>
+                    <a href="#" class="connexion bureau-uniquement">LOGIN</a>
+                    <button class="btn-icone mobile-uniquement" id="btnMenuMobile">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- Barre de recherche -->
+        <section class="zone-recherche">
+
+            <div class="conteneur conteneur-recherche">
+
+                <div class="conteneur-barre-recherche">
+                    <img src="img/Search.png" alt="recherche" class="icone-recherche-bureau bureau-uniquement"><i class="fa-solid fa-magnifying-glass icone-recherche-mobile mobile-uniquement"></i>
+                    <div class="first boite-recherche">
+                        
+                        
+                        <input type="text" value="living room" class="champ placeholder-italique">
+                        
+                        <div class="power">
+                           <span class="powered">Powered by <strong>Algolia</strong></span>
+                            <button class="btn-config">
+                                <img src="img/Sajari Logo.png" alt="config">
+                            </button> 
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="second bureau-uniquement">
+                        <select class="selecteur">
+                            <option>Best match</option>
+                            <option>Price ascending</option>
+                            <option>Descending price</option>
+                            <option>New products</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </section>
+
+        <!-- Mobile Controls (Sort & Filter) -->
+        <section class="controles-mobile mobile-uniquement">
+            <div class="rangee-controle">
+                <button class="btn-controle" id="btnTriMobile">
+                    <span>Best match</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+            </div>
+            <div class="rangee-controle">
+                <button class="btn-controle" id="btnFiltreMobile">
+                    <span>Filters</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+            </div>
+            
+            <div id="conteneurFiltresMobile" class="cache">
+                <!-- Filters content will be cloned here via JS or styled via CSS -->
+            </div>
+        </section>
+    
+        <div class="grille-produits">
+            
+            <!-- Filter -->
+            <div class="section-filtres bureau-uniquement">
+
+                <aside class="filtres">
+                    <h3 class="titre-filtre">FILTER BY</h3>
+
+                    <div class="groupe-filtre">
+                        <button class="btn-filtre">
+                            Collection
+                            <i class="fa-solid fa-chevron-down fleche"></i>
+                        </button>
+                    </div>
+
+                    <div class="groupe-filtre">
+                        <button class="btn-filtre">
+                            Color
+                            <i class="fa-solid fa-chevron-down fleche"></i>
+                        </button>
+                    </div>
+
+                    <div class="groupe-filtre">
+                        <button class="btn-filtre">
+                            Category
+                            <i class="fa-solid fa-chevron-down fleche"></i>
+                        </button>
+                    </div>
+
+                    <div class="groupe-filtre">
+                        <h4 class="sous-titre">Price Range</h4>
+                        <div class="curseur">
+                            <input type="range" min="0" max="10000" value="0" class="range-min">
+                            <input type="range" min="0" max="10000" value="10000" class="range-max">
+                        </div>
+                        <div class="prix-valeurs">
+                            <span id="range1">$0</span>
+                            <span id="range2">$10,000+</span>
+                        </div>
+                    </div>
+                </aside>
+                    
+            </div>
+            <!--End Filter-->
+
+            <!--Article 1-->
+            <div class="carte-produit">
+
+                <div class="image-produit">
+                    <img src="img/1.png" alt="product">
+                </div>
+                
+                <div class="conteneur-infos">
+                    <div class="details-produit">
+                        <div>
+                            <h3>Kawasaki Ninja ZX-10R</h3>
+                        </div>
+
+                        
+
+                        <div>
+                            <h6>Sportbikes</h6>
+                        </div>
+
+                        <div>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile">☆</span>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="zone-achat">
+                        <div>
+                            $25,924.80
+                        </div>
+
+                        <img src="img/add-to-cart.png" alt="purchase" width="25">
+                    </div>
+                </div>
+               
+
+            </div>
+            <!--End Article 1-->
+
+            <!--Article 2-->
+            <div class="carte-produit">
+                
+                <div class="image-produit">
+                    <img src="img/2.jpg" alt="product">
+                </div>
+
+                <div class="conteneur-infos">
+                    <div class="details-produit">
+                        <div>
+                            <h3>Kawasaki ninja 400</h3>
+                        </div>
+
+                        
+
+                        <div>
+                            <h6>Sportbikes</h6>
+                        </div>
+
+                        <div>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile">☆</span>
+                            <span class="icone-etoile">☆</span>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="zone-achat">
+                        <div>
+                            $5,499
+                        </div>
+
+                        <img src="img/add-to-cart.png" alt="purchase" width="25">
+                    </div>
+                </div>
+               
+
+            </div>
+            <!--End Article 2-->
+
+            <!--Article 3-->
+            <div class="carte-produit">
+                
+                <div class="image-produit">
+                    <img src="img/3.jpg" alt="product">
+                </div>
+
+                <div class="conteneur-infos">
+                    <div class="details-produit">
+                        <div>
+                            <h3>Kawasaki Ninja H2 SX SE</h3>
+                        </div>
+
+                        
+
+                        <div>
+                            <h6>Sportbikes</h6>
+                        </div>
+
+                        <div>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile">☆</span>
+                            <span class="icone-etoile">☆</span>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="zone-achat">
+                        <div>
+                            $22,750
+                        </div>
+
+                        <img src="img/add-to-cart.png" alt="purchase" width="25">
+                    </div>
+                </div>
+               
+
+            </div>
+            <!--End Article 3-->
+
+             <!--Article 4-->
+            <div class="carte-produit">
+                
+                <div class="image-produit">
+                    <img src="img/4.jpg" alt="product">
+                </div>
+
+                <div class="conteneur-infos">
+                    <div class="details-produit">
+                        <div>
+                            <h3>Kawasaki ninja H2R</h3>
+                        </div>
+
+                        
+
+                        <div>
+                            <h6>Sportbikes</h6>
+                        </div>
+
+                        <div>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile">☆</span>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="zone-achat">
+                        <div>
+                            $59,100
+                        </div>
+
+                        <img src="img/add-to-cart.png" alt="purchase" width="25">
+                    </div>
+                </div>
+               
+
+            </div>
+            <!--End Article 4-->
+
+            <!--Article 5-->
+            <div class="carte-produit">
+                
+                <div class="image-produit">
+                    <img src="img/5.jpg" alt="product">
+                </div>
+
+                <div class="conteneur-infos">
+                    <div class="details-produit">
+                        <div>
+                            <h3>YAMAHA YZF R1 2024</h3>
+                        </div>
+
+                        
+
+                        <div>
+                            <h6>Sportbikes</h6>
+                        </div>
+
+                        <div>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile">☆</span>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="zone-achat">
+                        <div>
+                            $24,156.02
+                        </div>
+
+                        <img src="img/add-to-cart.png" alt="purchase" width="25">
+                    </div>
+                </div>
+               
+
+            </div>
+            <!--End Article 5-->
+
+            <!--Article 6-->
+            <div class="carte-produit">
+                
+                <div class="image-produit">
+                    <img src="img/6.jpg" alt="product">
+                </div>
+
+                <div class="conteneur-infos">
+                    <div class="details-produit">
+                        <div>
+                            <h3>kawasaki Z-1000</h3>
+                        </div>
+
+                        
+
+                        <div>
+                            <h6>Sportbikes</h6>
+                        </div>
+
+                        <div>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile">☆</span>
+                            <span class="icone-etoile">☆</span>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="zone-achat">
+                        <div>
+                            $18,853.22
+                        </div>
+
+                        <img src="img/add-to-cart.png" alt="purchase" width="25">
+                    </div>
+                </div>
+               
+
+            </div>
+            <!--End Article 6-->
+
+            <!--Article 7-->
+            <div class="carte-produit">
+                
+                <div class="image-produit">
+                    <img src="img/7.jpg" alt="product">
+                </div>
+
+                <div class="conteneur-infos">
+                    <div class="details-produit">
+                        <div>
+                            <h3>Yamaha R7</h3>
+                        </div>
+
+                        
+
+                        <div>
+                            <h6>Sportbikes</h6>
+                        </div>
+
+                        <div>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                            <span class="icone-etoile pleine">☆</span>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="zone-achat">
+                        <div>
+                            $12,372.02
+                        </div>
+
+                        <img src="img/add-to-cart.png" alt="purchase" width="25">
+                    </div>
+                </div>
+               
+
+            </div>
+            <!--End Article 7-->
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="pagination">
+
+            <ul>
+                <li class="lien-page actif" value="1" onclick="activeLink()">1</li>
+                <li class="lien-page" value="2" onclick="activeLink()">2</li>
+                <li class="lien-page" value="3" onclick="activeLink()">3</li>
+                <li class="lien-page" value="4" onclick="activeLink()">4</li>
+                <li class="lien-page" value="5" onclick="activeLink()">5</li>
+                <li class="lien-page" value="6" onclick="activeLink()">6</li>
+                <li class="lien-page" value="7" onclick="activeLink()">7</li>
+                <li class="lien-page" value="8" onclick="activeLink()">8</li>
+                <li class="lien-page" value="9" onclick="activeLink()">9</li>
+                <li class="lien-page" value="10" onclick="activeLink()">10</li>
+            </ul>
+    
+            <button class="btn-suivant" onclick="nextBtn()">></button>
+    
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+</body>
+</html>
