@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elisee07.github.io/mon-e-commerce/sitemap.xml
